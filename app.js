@@ -23,7 +23,7 @@ mongoose.connect(MONGODB_URI, {
     console.log(`Error connecting to the DB: ${err}`)
 })
 
-const SERVER_PORT = 8080;
+const SERVER_PORT = process.env.PORT || 8080;
 
 
 console.log('starting express');
@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/', routes);
-app.listen(SERVER_PORT, IP_ADDRESS, () => {
+app.listen(SERVER_PORT,  () => {
     console.log(`App listening at ${SERVER_PORT}`)
 })
 
