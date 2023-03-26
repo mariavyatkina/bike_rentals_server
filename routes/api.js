@@ -73,7 +73,6 @@ router.post('/api/getEstimate', (req, res) => {
     estimation: calculations.getRentalHoursEstimation(temperature, season, holiday),
     average: calculations.getAverageRentalHours(season),
     allHours: calculations.getSeasonRentalHours(),
-    data: calculations.getData()
 })
 })
 

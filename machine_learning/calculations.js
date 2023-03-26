@@ -149,7 +149,5 @@ getAverageRentalHours:  function (season){
 getSeasonRentalHours:  function (){
     return {"winter": process.env.WINTER_HOURS, "spring": process.env.SPRING_HOURS,"summer": process.env.SUMMER_HOURS, "fall": process.env.FALL_HOURS}
 },
-getData: function(){
-    return process.env.DATA;
-}
+
 }
