@@ -20,7 +20,7 @@ export default function Estimation(props) {
     useEffect(() =>{
         async function onGetEstimate(){
            console.log(`making api call: ${temperature}, ${holiday}, ${season} `)
-            let response =  await fetch(`https://localhost:8080/api/getEstimate`, {
+            let response =  await fetch(`http://localhost:8080/api/getEstimate`, {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ export default function Estimation(props) {
             if(holiday === 1){
               opposite_holiday = 0;
             }
-            let opposite_response =  await fetch(`https://localhost:8080/api/getEstimate`, {
+            let opposite_response =  await fetch(`http://localhost:8080/api/getEstimate`, {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json'
