@@ -70,7 +70,6 @@ module.exports = {
         }
     
     }
-    process.env.DATA = allData.slice(0, 1000)
     dailyRentalAverage /= allRentalRecords.length;
     temperatureCoefficientAverage /= allRentalRecords.length;
     process.env.TEMPERATURE_COEFFICIENT = temperatureCoefficientAverage
